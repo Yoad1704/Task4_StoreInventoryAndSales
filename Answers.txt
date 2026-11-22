@@ -1,0 +1,6 @@
+1. product[] type of products array and int[] type of soldCount are both needed as product[] type keeps all the properties of a certain product in that index and int[] keeps only the amount in integer sold of that product (knows which one because of the index)
+2. without productCount we cant know which cell to add into as the length of the array only tells us the max product amount the store can have not how many it actually has
+3. nextId is static and is used for the whole class and the product regular id is relevant for this product only. The nextid keeps track of all ids in the class and is used to define id.
+4. allowing free change of stock without checks lets someone set a negative stock (invalid for an actual prodiuct) or change the stock directly without using the proper functions which messes up the inventory and sales tracking
+5. returning the array itself from the getter essentially returns the address of it so someone who gets it can change the array itself and mess with the productcount or soldCount
+6. break was used in the while loop in findProductIndex (when we find there is no need to search further so we break) and continue means to skip the current iteration and move to the next and we did that when products where not in stock in the printAvailableProducts function
